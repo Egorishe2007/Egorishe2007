@@ -1,4 +1,7 @@
-
+@import"https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Poppins:wght@400;700&display=swap";*:where(:not(html,iframe,canvas,img,svg,video,audio):not(svg *,symbol *)) {
+    all: unset;
+    display: revert
+}
 
 *,*::before,*::after {
     box-sizing: border-box
