@@ -1,0 +1,71 @@
+.project-block
+	@include block(300px)
+	
+.project
+	background-color: $colorBackgroundProject
+
+	&__container
+		padding: 35px 108px
+
+	&__title
+		@include title(48px, 72px, .2)
+		text-align: center
+	
+	&__text
+		@extend %text
+		text-align: center
+
+	&__list
+		margin-top: 45px
+		margin-bottom: 30px
+
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(255px, 1fr))
+		row-gap: clamp(23px, 6vw, 46px)
+		column-gap: clamp(60px, 5vw, 186px)
+
+	&__list-item
+		justify-self: center
+
+	&__lightbox 
+		position: fixed
+		top: 0
+		width: 100%
+		height: 100%
+
+		background-color: rgba($color: #000000, $alpha: 0.4)
+		transition: 0.4s
+
+		display: grid
+		place-content: center
+
+		visibility: hidden
+		opacity: 0
+
+		&-image
+			height: 30vw
+
+		&-left,
+		&-right
+			display: flex
+			justify-content: center
+			align-items: center
+
+			cursor: pointer
+
+			position: relative
+			width: 3vw
+			height: 7vw
+
+			font-size: 10vw
+			color: white
+			
+		&-left
+			bottom: -18vw
+
+		&-right
+			right: -38vw
+			top: -19vw
+
+
+@import ./project-media

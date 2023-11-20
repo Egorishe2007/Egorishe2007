@@ -1,0 +1,43 @@
+.designer
+	background-color: $colorBackgroundHeader
+
+	&__container
+		padding: 190px 80px		
+
+		display: grid
+		grid-template-columns: 40% 1fr
+		gap: clamp(40px, 4vw, 80px)
+
+	&__subtitle
+		font-weight: 400
+		font-size: clamp(20px, 4vw, 30px)
+		line-height: 45px
+		color: $colorTitle
+
+	&__title
+		margin-top: 5px
+
+		@include title(48px, 72px, 0)
+
+		&_highlight
+			color: $colorTitleHighlight
+
+	&__text
+		margin-top: 20px
+
+		@extend %text
+
+	&__buttons
+		margin-top: 90px
+
+		display: flex
+		justify-content: space-between
+
+	&__button
+		@extend %button
+
+	&__photo
+		filter: drop-shadow(36px -32px 0px $colorDropShadow)
+		border-radius: 0px 0px 0px 191px
+
+@import ./designer-media
